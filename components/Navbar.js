@@ -3,6 +3,7 @@
 import { CATS, TYPES } from "@/lib/data";
 import { useShop } from "@/context/ShopContext";
 import MiniShell from "./MiniShell";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const { count, pick, openBag, openMenu } = useShop();
@@ -33,6 +34,7 @@ export default function Navbar() {
         <a className="lnk" href="#shop">Shop</a>
         <a className="lnk" href="#why">Why Turtle</a>
         <a className="lnk" href="#visit">Contact</a>
+        <ThemeToggle />
         <button className="bagbtn" onClick={openBag} aria-label="Open bag">
           Bag <span className="n" key={count}>{count}</span>
         </button>
